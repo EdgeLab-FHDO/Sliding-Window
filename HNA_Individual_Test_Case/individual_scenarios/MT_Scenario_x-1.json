@@ -1,0 +1,37 @@
+{
+	"ScenarioId":"Test101",
+		"carInfo":[
+			{
+				"v001":{
+				"port":14151,
+				"carSpeed":140,
+				"initPosition":10
+				}
+			
+			},
+			{
+				"v002":{
+				"port":14152,
+				"carSpeed":140,
+				"initPosition":1
+				}
+			}
+		],
+	"APsInfo":
+		{
+			"numberAPs":1,
+			"coverageArea":10040
+				
+		},
+	
+	"hazardInfo":[
+		{
+			"ID":"H000",
+			"type":"pd",
+			"location":226
+				
+		}
+		
+	]
+			
+}

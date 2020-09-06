@@ -1,0 +1,40 @@
+root - INFO - *{'V_ID':'v001','det_time':'1586969340.2439263','h_ID':'v001-0','type':'TT', 'location':210.33333333333326}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969340.2518826','h_ID':'v001-0','type':'TT', 'location':159.72222222222214, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969340.7611158','h_ID':'v001-1','type':'TT', 'location':230.16666666666643}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969340.7660043','h_ID':'v001-1','type':'TT', 'location':179.55555555555532, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969341.2881887','h_ID':'v001-2','type':'TT', 'location':250.3888888888885}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969341.2928014','h_ID':'v001-2','type':'TT', 'location':199.77777777777737, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969341.8062353','h_ID':'v001-3','type':'TT', 'location':270.2222222222227}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969341.810955','h_ID':'v001-3','type':'TT', 'location':219.61111111111055, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969342.3232727','h_ID':'v001-4','type':'TT', 'location':290.0555555555573}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969342.3283308','h_ID':'v001-4','type':'TT', 'location':239.44444444444372, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969342.8506045','h_ID':'v001-5','type':'TT', 'location':310.27777777778084}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969342.8553717','h_ID':'v001-5','type':'TT', 'location':259.66666666666606, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969343.3706605','h_ID':'v001-6','type':'TT', 'location':330.11111111111546}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969343.3752666','h_ID':'v001-6','type':'TT', 'location':279.5000000000007, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969343.89759','h_ID':'v001-7','type':'TT', 'location':350.333333333339}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969343.9023974','h_ID':'v001-7','type':'TT', 'location':299.7222222222242, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969344.4139616','h_ID':'v001-8','type':'TT', 'location':370.1666666666736}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969344.4184403','h_ID':'v001-8','type':'TT', 'location':319.55555555555884, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969344.9295492','h_ID':'v001-9','type':'TT', 'location':390.00000000000824}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969344.934276','h_ID':'v001-9','type':'TT', 'location':339.38888888889346, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969345.460177','h_ID':'v001-10','type':'TT', 'location':410.2222222222318}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969345.4648557','h_ID':'v001-10','type':'TT', 'location':359.611111111117, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969345.978034','h_ID':'v001-11','type':'TT', 'location':430.0555555555664}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969345.9829571','h_ID':'v001-11','type':'TT', 'location':379.4444444444516, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969346.505602','h_ID':'v001-12','type':'TT', 'location':450.27777777778994}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969346.5108285','h_ID':'v001-12','type':'TT', 'location':399.66666666667516, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969347.0229948','h_ID':'v001-13','type':'TT', 'location':470.11111111112456}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969347.0275888','h_ID':'v001-13','type':'TT', 'location':419.5000000000098, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969347.5521052','h_ID':'v001-14','type':'TT', 'location':490.3333333333481}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969347.556751','h_ID':'v001-14','type':'TT', 'location':439.7222222222333, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969348.0697181','h_ID':'v001-15','type':'TT', 'location':510.1666666666827}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969348.0741813','h_ID':'v001-15','type':'TT', 'location':459.55555555556793, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969348.5870574','h_ID':'v001-16','type':'TT', 'location':530.0000000000173}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969348.5917895','h_ID':'v001-16','type':'TT', 'location':479.38888888890256, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969349.1157062','h_ID':'v001-17','type':'TT', 'location':550.2222222222408}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969349.1207833','h_ID':'v001-17','type':'TT', 'location':499.6111111111261, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969349.6331382','h_ID':'v001-18','type':'TT', 'location':570.0555555555754}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969349.6379507','h_ID':'v001-18','type':'TT', 'location':519.4444444444607, 'server':'s1'}
+root - INFO - *{'V_ID':'v001','det_time':'1586969350.1608002','h_ID':'v001-19','type':'TT', 'location':590.277777777799}
+root - INFO - *{'V_ID':'v002','rec_time':'1586969350.165453','h_ID':'v001-19','type':'TT', 'location':539.6666666666843, 'server':'s1'}

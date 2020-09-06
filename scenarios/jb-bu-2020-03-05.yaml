@@ -1,0 +1,300 @@
+version: 1.3.0
+name: jb-bu-2020-03-05
+deployment:
+    interDomainLatency: 50
+    interDomainLatencyVariation: 10
+    interDomainThroughput: 1000
+    domains:
+        -
+            id: PUBLIC
+            name: PUBLIC
+            type: PUBLIC
+            interZoneLatency: 6
+            interZoneLatencyVariation: 2
+            interZoneThroughput: 1000
+            zones:
+                -
+                    id: PUBLIC-COMMON
+                    name: PUBLIC-COMMON
+                    type: COMMON
+                    netChar:
+                        latency: 5
+                        latencyVariation: 1
+                        throughput: 1000
+                    networkLocations:
+                        -
+                            id: PUBLIC-COMMON-DEFAULT
+                            name: PUBLIC-COMMON-DEFAULT
+                            type: DEFAULT
+                            terminalLinkLatency: 1
+                            terminalLinkLatencyVariation: 1
+                            terminalLinkThroughput: 1000
+                            terminalLinkPacketLoss: 1
+        -
+            id: op1
+            name: op1
+            type: OPERATOR
+            interZoneLatency: 3
+            interZoneLatencyVariation: 2
+            interZoneThroughput: 1000
+            zones:
+                -
+                    id: op1-COMMON
+                    name: op1-COMMON
+                    type: COMMON
+                    netChar:
+                        latency: 5
+                        latencyVariation: 1
+                        throughput: 1000
+                    networkLocations:
+                        -
+                            id: op1-COMMON-DEFAULT
+                            name: op1-COMMON-DEFAULT
+                            type: DEFAULT
+                            terminalLinkLatency: 1
+                            terminalLinkLatencyVariation: 1
+                            terminalLinkThroughput: 1000
+                            terminalLinkPacketLoss: 1
+                -
+                    id: zone1
+                    name: zone1
+                    type: ZONE
+                    netChar:
+                        latency: 4
+                        latencyVariation: 2
+                        throughput: 1000
+                    networkLocations:
+                        -
+                            id: zone1-DEFAULT
+                            name: zone1-DEFAULT
+                            type: DEFAULT
+                            terminalLinkLatency: 1
+                            terminalLinkLatencyVariation: 1
+                            terminalLinkThroughput: 1000
+                            terminalLinkPacketLoss: 1
+                            physicalLocations:
+                                -
+                                    id: edgenode1
+                                    name: edgenode1
+                                    type: EDGE
+                        -
+                            id: poa1
+                            name: poa1
+                            type: POA
+                            terminalLinkLatency: 3
+                            terminalLinkLatencyVariation: 2
+                            terminalLinkThroughput: 1000
+                            physicalLocations:
+                                -
+                                    id: fog1
+                                    name: fog1
+                                    type: FOG
+                                    processes:
+                                        -
+                                            id: server
+                                            name: server
+                                            type: EDGE-APP
+                                            isExternal: true
+                                            externalConfig:
+                                                ingressServiceMap:
+                                                    -
+                                                        name: v002-app
+                                                        port: 14152
+                                                        externalPort: 30151
+                                                        protocol: UDP
+                                                egressServiceMap:
+                                                    -
+                                                        name: server
+                                                        ip: 192.168.122.104
+                                                        port: 15151
+                                                        protocol: TCP
+                                            appThroughput: 1000
+                                    linkLatency: 2
+                                    linkLatencyVariation: 1
+                                    linkThroughput: 1000
+                                -
+                                    id: v001
+                                    name: v001
+                                    type: UE
+                                    processes:
+                                        -
+                                            id: v001-app
+                                            name: v001-app
+                                            type: UE-APP
+                                            isExternal: true
+                                            userChartLocation: null
+                                            userChartAlternateValues: null
+                                            userChartGroup: null
+                                            image: null
+                                            environment: null
+                                            commandArguments: null
+                                            commandExe: null
+                                            serviceConfig: null
+                                            gpuConfig: null
+                                            externalConfig:
+                                                ingressServiceMap:
+                                                    -
+                                                        externalPort: 30131
+                                                        name: server
+                                                        port: 15151
+                                                        protocol: TCP
+                                                    -
+                                                        externalPort: 30132
+                                                        name: s2
+                                                        port: 15152
+                                                        protocol: TCP
+                                                    -
+                                                        externalPort: 30133
+                                                        name: s3
+                                                        port: 15152
+                                                        protocol: TCP
+                                                egressServiceMap: []
+                                            appLatency: 0
+                                            appLatencyVariation: 0
+                                            appThroughput: 1000
+                                            appPacketLoss: 0
+                                            placementId: ""
+                                    linkThroughput: 1000
+                                -
+                                    id: v002
+                                    name: v002
+                                    type: UE
+                                    processes:
+                                        -
+                                            id: v002-app
+                                            name: v002-app
+                                            type: UE-APP
+                                            isExternal: true
+                                            externalConfig:
+                                                egressServiceMap:
+                                                    -
+                                                        name: v002-app
+                                                        ip: 192.168.122.104
+                                                        port: 14152
+                                                        protocol: UDP
+                                            appThroughput: 1000
+                                    linkThroughput: 1000
+                        -
+                            id: poa2
+                            name: poa2
+                            type: POA
+                            terminalLinkLatency: 3
+                            terminalLinkLatencyVariation: 2
+                            terminalLinkThroughput: 1000
+                            physicalLocations:
+                                -
+                                    id: fog2
+                                    name: fog2
+                                    type: FOG
+                                    processes:
+                                        -
+                                            id: s2
+                                            name: s2
+                                            type: EDGE-APP
+                                            isExternal: true
+                                            externalConfig:
+                                                ingressServiceMap:
+                                                    -
+                                                        name: v002-app
+                                                        port: 14152
+                                                        externalPort: 30152
+                                                        protocol: UDP
+                                                egressServiceMap:
+                                                    -
+                                                        name: s2
+                                                        ip: 192.168.122.104
+                                                        port: 15152
+                                                        protocol: TCP
+                                            appThroughput: 1000
+                                    linkThroughput: 1000
+                        -
+                            id: poa3
+                            name: poa3
+                            type: POA
+                            terminalLinkLatency: 3
+                            terminalLinkLatencyVariation: 2
+                            terminalLinkThroughput: 1000
+                            physicalLocations: []
+                -
+                    id: zone2
+                    name: zone2
+                    type: ZONE
+                    netChar:
+                        latency: 4
+                        latencyVariation: 2
+                        throughput: 1000
+                    networkLocations:
+                        -
+                            id: zone2-DEFAULT
+                            name: zone2-DEFAULT
+                            type: DEFAULT
+                            terminalLinkLatency: 1
+                            terminalLinkLatencyVariation: 1
+                            terminalLinkThroughput: 1000
+                            terminalLinkPacketLoss: 1
+                        -
+                            id: poa4
+                            name: poa4
+                            type: POA
+                            terminalLinkLatency: 3
+                            terminalLinkLatencyVariation: 2
+                            terminalLinkThroughput: 1000
+                        -
+                            id: poa5
+                            name: poa5
+                            type: POA
+                            terminalLinkLatency: 3
+                            terminalLinkLatencyVariation: 2
+                            terminalLinkThroughput: 1000
+                        -
+                            id: poa6
+                            name: poa6
+                            type: POA
+                            terminalLinkLatency: 3
+                            terminalLinkLatencyVariation: 2
+                            terminalLinkThroughput: 1000
+                        -
+                            id: poa7
+                            name: poa7
+                            type: POA
+                            terminalLinkLatency: 3
+                            terminalLinkLatencyVariation: 2
+                            terminalLinkThroughput: 1000
+                -
+                    id: zone3
+                    name: zone3
+                    type: ZONE
+                    netChar:
+                        latency: 4
+                        latencyVariation: 2
+                        throughput: 1000
+                    networkLocations:
+                        -
+                            id: zone3-DEFAULT
+                            name: zone3-DEFAULT
+                            type: DEFAULT
+                            terminalLinkLatency: 1
+                            terminalLinkLatencyVariation: 1
+                            terminalLinkThroughput: 1000
+                            terminalLinkPacketLoss: 1
+                        -
+                            id: poa8
+                            name: poa8
+                            type: POA
+                            terminalLinkLatency: 3
+                            terminalLinkLatencyVariation: 2
+                            terminalLinkThroughput: 1000
+                        -
+                            id: poa9
+                            name: poa9
+                            type: POA
+                            terminalLinkLatency: 3
+                            terminalLinkLatencyVariation: 2
+                            terminalLinkThroughput: 1000
+                        -
+                            id: poa10
+                            name: poa10
+                            type: POA
+                            terminalLinkLatency: 3
+                            terminalLinkLatencyVariation: 2
+                            terminalLinkThroughput: 1000

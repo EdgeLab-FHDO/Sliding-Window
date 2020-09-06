@@ -1,0 +1,52 @@
+{
+	"s1":
+	{
+		"port_tcp":15151,
+		"port_downlink": 14151
+	}, 
+	"s2":
+	{
+		"port_tcp":15152,
+		"port_downlink": 14152
+	},
+	"s3":
+	{
+		"port_tcp":15153,
+		"port_downlink": 14153
+	},
+	"s4":
+	{
+		"port_tcp":15154,
+		"port_downlink": 14154
+	},
+	"s5":
+	{
+		"port_tcp":15155,
+		"port_downlink": 14155
+	},
+	"s6":
+	{
+		"port_tcp":15156,
+		"port_downlink": 14156
+	},
+	"s7":
+	{
+		"port_tcp":15157,
+		"port_downlink": 14157
+	},
+	"s8":
+	{
+		"port_tcp":15158,
+		"port_downlink": 14158
+	},	
+	"s9":
+	{
+		"port_tcp":15159,
+		"port_downlink": 14159
+	},		
+	"s10":
+	{
+		"port_tcp":15160,
+		"port_downlink": 14160
+	}
+}

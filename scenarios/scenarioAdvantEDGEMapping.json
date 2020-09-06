@@ -1,0 +1,27 @@
+
+
+
+
+v001-app
+Ingress Service Mapping
+30131:server:15151:TCP,30132:s2:15152:TCP,30133:s3:15152:TCP
+
+
+v002-app
+Egress Service Mapping
+v002-app::192.168.122.104:14152:UDP
+
+
+server
+Ingress Service Mapping
+30151:v002-app:14152:UDP
+Egress Service Mapping
+server::192.168.122.104:15151:TCP
+
+
+
+s2
+Ingress Service Mapping
+30152:v002-app:14152:UDP
+Egress Service Mapping
+s2::192.168.122.104:15152:TCP

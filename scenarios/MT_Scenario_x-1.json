@@ -1,0 +1,26 @@
+{
+	"ScenarioId":"Test101",
+		"carInfo":[
+			{
+				"v001":{
+				"carSpeed":100,
+				"initPosition":7
+				}
+			
+			},
+			{
+				"v002":{
+				"carSpeed":100,
+				"initPosition":5
+				}
+			}
+		],
+	"APsInfo":
+		{
+			"numberAPs":10,
+			"coverageArea":3000
+				
+		}
+	
+		
+}

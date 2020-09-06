@@ -1,0 +1,69 @@
+V001-PUBLISHER
+
+i need to publish in the port 30121 [port value in URL RestClientSingle.py] from the v001-app REST-Client (ingress mapping)
+
+INGRESS:30121:s1-ul:15151:TCP  
+---------------------------------------------------------------------------------------
+V002-LISTENER
+
+I need to connect to the server in port 30171 [port value in Receive_MainEnvironmentSimulator.py].
+Then AdvantEdge does the mapping from v002-app to the server listening in 14151 (ingress mapping)
+
+INGRESS: 30171:s1-dl:14151:TCP
+
+---------------------------------------------------------------------------------------
+SERVER (S1)
+
+my server must listen at port 15151 for the REST-server (egress mapping)
+The server must listen at port 14151 for the TCP-server [socket] (egress mapping)
+
+
+
+S1-UL
+EGRESS:s1-dl::192.168.122.104:14151:TCP
+
+
+S1-DL
+EGRESS:s1-ul::192.168.122.104:15151:TCP
+
+
+
+
+
+****************************************************
+CONFIGURATION OF SCENARIO WITH 2 SERVERS
+
+
+S1
+s1-ul
+Egress: s1-ul::192.168.122.104:15151:TCP
+s1-dl
+Egress:  s1-dl::192.168.122.104:14151:TCP
+
+S2
+s2-ul
+Egress: s2-ul::192.168.122.104:15152:TCP
+s2-dl
+Egress:  s2-dl::192.168.122.104:14152:TCP
+
+S3
+s3-ul
+Egress: s3-ul::192.168.122.104:15153:TCP
+s3-dl
+Egress:  s3-dl::192.168.122.104:14153:TCP
+
+
+v001-app
+
+Ingress:	30121:s1-ul:15151:TCP	30122:s2-ul:15152:TCP	30123:s3-ul:15153:TCP
+
+
+v002-app 
+
+Ingress: 	30171:s1-dl:14151:TCP	30172:s2-dl:14152:TCP	30173:s3-dl:14153:TCP
+
+
+
+
+
+

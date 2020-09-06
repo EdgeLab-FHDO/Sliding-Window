@@ -1,0 +1,92 @@
+{
+	"ScenarioId":"Test102",
+		"carInfo":[
+			{
+				"v001":{
+				"port":14151,
+				"carSpeed":140,
+				"initPosition":201
+				}
+			
+			},
+			{
+				"v002":{
+				"port":14152,
+				"carSpeed":138,
+				"initPosition":156
+				}
+			}
+		],
+	"APsInfo":
+		{
+			"numberAPs":8,
+			"coverageArea":2400
+				
+		},
+	
+	"hazardInfo":[
+		{
+			"ID":"H000",
+			"type":"pd",
+			"location":208
+				
+		},
+		{
+			"ID":"H010",
+			"type":"an",
+			"location":303
+				
+		},	
+		{
+			"ID":"H011",
+			"type":"fg",
+			"location":903
+				
+		},		
+		{
+			"ID":"H001",
+			"type":"pd",
+			"location":1203
+				
+		},
+		
+		{
+			"ID":"H002",
+			"type":"ph",
+			"location":1534
+				
+		},
+		{
+			"ID":"H003",
+			"type":"fg",
+			"location":1620
+				
+		},
+		{
+			"ID":"H004",
+			"type":"an",
+			"location":1711
+				
+		},
+		{
+			"ID":"H005",
+			"type":"cv",
+			"location":1911
+				
+		},
+		{
+			"ID":"H006",
+			"type":"rt",
+			"location":2103
+				
+		},		
+		{
+			"ID":"H007",
+			"type":"ip",
+			"location":2303
+				
+		}
+		
+	]
+			
+}
