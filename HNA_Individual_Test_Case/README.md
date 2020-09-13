@@ -11,14 +11,13 @@ Each case must be run individually and the scenario files adjusted accordinly.
 
 
 ## Usage
-1. Configure AdvantEDGE for port mapping
-2. Configure the scenario.json file to set the initial position of the vehicles.
+1. Configure the scenario.json file to set the initial position of the vehicles.
+2. Configure AdvantEDGE for port mapping
 3. Update the scenarioReader script to read your scenario.
 4. Run the SEHNS server (`s1`).
 5. Run the publisher.
 6. Run the receiver.
 
-- `"identifier":string` a globally unique identifier for the hazard
 
 
 ### Configuring the Individual Scenarios.
@@ -87,5 +86,20 @@ v001-pos>CoverageArea
 v002-pos<CoverageArea
 numberAPs=2
 server: s2
+
+### Configure AdvantEDGE for port mapping
+
+To configure the port mapping in AdvantEDGE scenario, you must make sure the ports being used in this example are released.
+
+** Used Ports **
+- 30121
+- 30171
+- 15151
+- 14151
+
+
+PORT-MAPPING file provides a detailed example.
+
+
 
 
