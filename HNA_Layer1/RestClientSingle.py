@@ -13,12 +13,7 @@ import threading
 #DATE: 15-04-2020
 #TO-DOs: 
 #   -Testing not updated
-#   -Implement a logic to publish only in the current server
-#   - Implement a hand-off delay 
 
-#       Hand-off delay means that after we get the event mobility (change of PoA in AdvantEDGE),
-#       it is required to "wait" for some time until we start publishinig in the correspondent server.
-#       This time must be configurable 
 """
 DESCRIPTION:
 #This script attempts to create an independent thread used to publish to each given URL. 
