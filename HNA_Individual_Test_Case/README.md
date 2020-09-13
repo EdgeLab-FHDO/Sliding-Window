@@ -1,17 +1,18 @@
-# Hazard Registry Service
+# SEHNS Individual cases
+
+This files run SEHNS to test the E2EL obtained in each of the four cases of the border problem.
+Each case must be run individually and the scenario files adjusted accordinly.
 
 ## Usage
+1. Configure AdvantEDGE for port mapping
+2. Configure the scenario.json file to set the initial position of the vehicles.
+3. Update the scenarioReader script to read your scenario.
+4. Run the SEHNS server (`s1`).
+5. Run the publisher.
+6. Run the receiver.
 
-All responses will have the form
+- `"identifier":string` a globally unique identifier for the hazard
 
-```json
-{
-    "data": "content of the response",
-    "message": "Description of the response"
-}
-```
-
-Subsequent response definitions will only detail the expected value of the `data field`
 
 ### List all notified hazards on the server
 
@@ -66,44 +67,3 @@ Subsequent response definitions will only detail the expected value of the `data
 
 If a hazard with the given identifier already exists, the existing hazard will be overwritten.
 
-**Response**
-
-- `201 Created` on success
-
-```json
-{
-    "identifier": "h1",
-    "hazard_name": "hazard_detected",
-    "hazard_type": "pothole",
-    "location": "1334.6"
-}
-```
-
-##  hazard details
-
-`GET /detected_hazard/<identifier>`
-
-**Response**
-
-- `404 Not Found` if the hazard identifier does not exist on the DB
-- `200 OK` on success
-
-```json
-{
-    "identifier": "h1",
-    "hazard_name": "hazard_detected",
-    "hazard_type": "pothole",
-    "location": "1334.6"
-}
-```
-
-## Delete a device
-
-**Definition**
-
-`DELETE /detected_hazard/<identifier>`
-
-**Response**
-
-- `404 Not Found` if the device does not exist
-- `204 No Content` on success
