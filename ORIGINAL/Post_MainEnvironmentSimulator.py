@@ -48,7 +48,7 @@ SCRIPT VARIABLES
 end_flag=1 #Determines when to finish the simulation
 synch_delay=1#time to wait in minutes before running the script in order to synch all the clients
 detection_range=1 #The detection range in meters in which the car can detect a hazzard 
-simulation_speed=10 #determines the speed of the vehicle in ms. This value must match with the time.sleep of the movement thread
+simulation_speed=10 #determines the speed of the vehicle in ms. This value must match with the time of the movement thread
 hazard_generator=['equidistant',20] #sets how to create the hazard and the separation distance
 #MODIFICATION - change the generation type above
 """
@@ -129,7 +129,7 @@ def thread_vehicle_movement(vehicle_ID, vehicle_init_pos, vehicle_speed):
 			
         actual_position_car=actual_position_car+m_Xms #moves the car with real speed each Xms
 											
-		#TODO: make sure the complete loops is 10ms --> use waitUntil
+		
 
         time.sleep(0.01) #should be 10ms --> make sure it is always the same
         end=time.time()
