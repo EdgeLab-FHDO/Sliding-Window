@@ -3,6 +3,13 @@
 This files run SEHNS to test the E2EL obtained in each of the four cases of the border problem.
 Each case must be run individually and the scenario files adjusted accordinly.
 
+
+* Case 1: Both UE connect through the same PoA in normal execution.
+* Case 2: The UE connect through different PoA, before service migration.
+* Case 3: Both UE connect through the same PoA, but the edge node server is on a different PoA.
+* Case 4: The UE connect through different PoA, after service migration.
+
+
 ## Usage
 1. Configure AdvantEDGE for port mapping
 2. Configure the scenario.json file to set the initial position of the vehicles.
@@ -14,56 +21,71 @@ Each case must be run individually and the scenario files adjusted accordinly.
 - `"identifier":string` a globally unique identifier for the hazard
 
 
-### List all notified hazards on the server
+### Configuring the Individual Scenarios.
 
-**Definition**
+The SEHNS-server can be deployen in two network tiers:
+- First network Tier: The edge servers are placed in the Points of Access (PoA) ::APs in json file::
+- Second network Tier: The edge servers are placed in the first Point of Concentration layer (PoC)
 
-`GET /detected_hazards`
+To simulate an specific scenario, modify the initial position (initPosition) of the vehicles, the number of PoA (numberAPs) and the coverage area in the template provided and create the desired scenario.
 
-**Response**
 
-- `200 OK` on success
 
 ```json
 [
-    {
-    "message": "Success",
-    "data": [
-        {
-            "identifier": "h0",
-            "hazard_name": "h_name",
-            "hazard_type": "pedestrian",
-            "location": "1207.66666667"
-        },
-        {
-            "identifier": "h1",
-            "hazard_name": "h_name",
-            "hazard_type": "pothole",
-            "location": "1533.91666667"
-        },
-        {
-            "identifier": "h2",
-            "hazard_name": "h_name",
-            "hazard_type": "ice patch",
-            "location": "1731.83333333"
-        }
-    ]
+
+{
+	"ScenarioId":"TestLayer1Case1",
+		"carInfo":[
+			{
+				"v001":{
+				"carSpeed":100,
+				"initPosition":3
+				}
+			
+			},
+			{
+				"v002":{
+				"carSpeed":100,
+				"initPosition":1
+				}
+			}
+		],
+	"APsInfo":
+		{
+			"numberAPs":1,
+			"coverageArea":10040
+				
+		}			
 }
 ]
 ```
 
-### When the vehicle attempts to post a detected hazard
+Consider the following parameters to simulate each case:
 
-**Definition**
+* Case 1:
+v001-initPosition<CoverageArea
+v002-initPosition<CoverageArea
+numberAPs=1
+server: s1
 
-`POST /detected_hazards`
+* Case 2:
+v001-initPosition<CoverageArea
+v002-initPosition>CoverageArea
+numberAPs=2
+server: s1
 
-**Arguments**
+* Case 3:
+v001-initPosition>CoverageArea
+v002-initPosition>CoverageArea
+numberAPs=2
+server: s1
 
-- `"identifier":string` a globally unique identifier for the hazard
-- `"hazard_name":string` a name given to the hazard
-- `"hazard_type":string` the type of detected hazard (pothole, pedestrian, icepatch, ...)
-- `"location":number` the position of where the vehicle has detected the hazard
 
-If a hazard with the given identifier already exists, the existing hazard will be overwritten.
+* Case 4:
+v001-pos>CoverageArea
+v002-pos<CoverageArea
+numberAPs=2
+server: s2
+
 
