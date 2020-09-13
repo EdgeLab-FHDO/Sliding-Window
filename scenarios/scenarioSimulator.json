@@ -4,16 +4,16 @@
 			{
 				"v001":{
 				"port":14151,
-				"carSpeed":140,
-				"initPosition":201
+				"carSpeed":100,
+				"initPosition":3
 				}
 			
 			},
 			{
 				"v002":{
 				"port":14152,
-				"carSpeed":138,
-				"initPosition":156
+				"carSpeed":10,
+				"initPosition":1
 				}
 			}
 		],
