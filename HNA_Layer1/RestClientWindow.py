@@ -20,7 +20,7 @@ DESCRIPTION:
 """   
 
 
-NUMBER_POA_SCENARIO=5  #MODIFICATION-this must be the same number of active servers in the scenario
+NUMBER_POA_SCENARIO=5  #MODIFICATION-this must be the same number of active servers in the scenario defined in AdvantEDGE
 detected_hazards_urls=['http://192.168.122.104:30121/detected_hazard','http://192.168.122.104:30121/detected_hazard','http://192.168.122.104:30121/detected_hazard'] #URL of the server when using AdvantEDGE
 
 url_vehicles='http://192.168.122.104:30121/vehiclelist'
