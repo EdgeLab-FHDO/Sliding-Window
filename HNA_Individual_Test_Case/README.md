@@ -91,12 +91,13 @@ server: s2
 
 To configure the port mapping in AdvantEDGE scenario, you must make sure the ports being used in this example are released.
 
-** Used Ports **
+**Used Ports**
 - 3012x: TCP used for uplink --> The SEHNS client publishes to this port.
-- 3017x: TCP used for downlink --> The SEHNS client listens to this port.
 - 1515x: TCP used for uplink --> The SEHNS server listens to this port.
+- 3017x: TCP used for downlink --> The SEHNS client listens to this port.
 - 1415x: TCP used for downlink --> The SEHNS pushes trough this port.
 
+**Note:** The "x" represents the number of server. For example in case 3, we connect to s1. Therefore, the used ports will be: 30121, 30171, 15151, 14151.
 
 PORT-MAPPING file provides a detailed example of the configuration required in AdvantEDGE scenario.
 
