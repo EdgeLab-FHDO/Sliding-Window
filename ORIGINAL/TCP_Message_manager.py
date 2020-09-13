@@ -6,7 +6,7 @@ import time
 #MODIFICATION: This file does NOT need to change
 #DATE: 15-04-2020
 #TO-DOs: 
-#   -Handle the data if the message has arrived partially  -->till now i havent have that problem but should be done in the future
+#   -Handle the data if the message has arrived partially
 """
 DESCRIPTION:
 This file is used to read the data from the TCP buffer and split it according to the header of the message
